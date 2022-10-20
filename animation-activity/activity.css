@@ -16,6 +16,7 @@
   animation-name: bottom;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  position: relative
 }
 
 nav {
@@ -27,17 +28,21 @@ nav {
   opacity: 1;
 }
 
+/*rotate top left bottom right*/
 @keyframes top {
-  from {}
-  to {}
+  from {rotate: 0deg; margin-top:0px}
+  to {rotate: 45deg; margin-top:45px}
 }
 
+/*needs to disappear*/
 @keyframes middle {
-  from {}
-  to {}
+  from {visibility: visible;}
+  to {visibility: hidden;}
 }
 
+/*rotate bottom left to top right*/
 @keyframes bottom {
-  from {}
-  to {}
+  from {rotate:0deg; bottom:0px;}
+  to {rotate:-45deg; bottom:40px;}
 }
+
